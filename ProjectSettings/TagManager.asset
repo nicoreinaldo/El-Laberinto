@@ -47,9 +47,15 @@ TagManager:
   - name: Avatar
     uniqueID: 3924274587
     locked: 0
+  - name: Box
+    uniqueID: 3890508715
+    locked: 0
   - name: Background
     uniqueID: 786089951
     locked: 0
   - name: Collider
     uniqueID: 2789477165
+    locked: 0
+  - name: Popup
+    uniqueID: 1029846547
     locked: 0

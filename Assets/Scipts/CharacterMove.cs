@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class CharacterMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private bool facingRight = false;
     public Animator animator;
     public float moveSpeed = 5f;
+    public bool isMoventEnable = true;
 
     Vector2 movement;
 
@@ -17,8 +18,14 @@ public class CharacterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+
     private void Update()
     {
+        // Movimiento del persoanje en null o no.
+        if (!isMoventEnable){
+            return;
+        }
+
         if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
         {
             //HandleMobileInput();
@@ -31,7 +38,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void HandlePCInput()
     {
-        
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -39,11 +46,13 @@ public class CharacterMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        if (isMoventEnable)
+        {
+            rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        }
     }
 }

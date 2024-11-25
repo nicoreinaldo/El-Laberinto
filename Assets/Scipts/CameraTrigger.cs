@@ -17,7 +17,6 @@ public class CamTrigger : MonoBehaviour
         {
             cameraController.SwitchToNextCamera();
 
-            // Optionally, deactivate the object to prevent re-triggering
             gameObject.SetActive(false);
         }
     }
