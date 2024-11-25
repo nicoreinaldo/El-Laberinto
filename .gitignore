@@ -8,6 +8,7 @@
 UserSettings/
 
 # Archivos de configuración de VSCode/Visual Studio
+.vs/
 .vscode/
 *.csproj
 *.unityproj
