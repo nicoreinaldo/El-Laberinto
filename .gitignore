@@ -1,7 +1,35 @@
+# Archivos de Unity generados automáticamente
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-[Mm]emoryCaptures/
+UserSettings/
+
+# Archivos de configuración de VSCode/Visual Studio
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Archivos relacionados con Burst Debug Information
+*_BurstDebugInformation_DoNotShip/
+
+# Otros archivos que no necesitas subir
+.DS_Store
+Thumbs.db
+*.apk
+*.aab
+*.app
+*.ipa
+
+# Excluir archivos específicos
+El Laberinto_BurstDebugInformation_DoNotShip/
+El Laberinto.sln.app
